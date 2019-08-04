@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ButtonCon : MonoBehaviour {  //シーン移動に関するScript
 
     private AudioSource[] sources;
-    public float Number = 0f;
+    public float Number = 0f;      
     
     void Start () {
         sources = gameObject.GetComponents<AudioSource>();
@@ -22,19 +22,20 @@ public class ButtonCon : MonoBehaviour {  //シーン移動に関するScript
         if (collision.gameObject.tag == "Bullet")
         {
 
-            if(Number == 1)
+            //--シーン事に数字を決め、Numberの値を飛ばしたいシーンの数字にする
+            if (Number == 1)
             {
-                Invoke("GoMain", 1f);
+                Invoke("GoMain", 1f);//--メインに飛ぶ
             }
             
             if(Number == 2)
             {
-                Invoke("GoTyuto", 1f);
+                Invoke("GoTyuto", 1f);//--チュートリアルに飛ぶ
             }
 
             if(Number == 3)
             {
-                Invoke("GoTitel", 1f);
+                Invoke("GoTitel", 1f);//--タイトルに飛ぶ
             }
             sources[0].Play();
             

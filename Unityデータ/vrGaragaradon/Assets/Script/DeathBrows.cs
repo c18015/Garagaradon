@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class DeathBrows : MonoBehaviour
+public class DeathBrows : MonoBehaviour　//--必殺技のスクリプト
 {
     GameObject UIobj;
 
